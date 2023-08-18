@@ -72,7 +72,6 @@ export const lightTheme = createTheme({
       }
     },
 
-
     MuiCard: {
       defaultProps: {
         elevation: 0
