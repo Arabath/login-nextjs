@@ -1,18 +1,17 @@
+import type { NextPage } from "next";
+//import NextLink from "next/link";
+import { Box, Button, Typography } from "@mui/material";
 
-import { Inter } from "next/font/google";
-import NextLink from "next/link";
-const inter = Inter({ subsets: ["latin"] });
-
-export default function Home() {
+const HomePage: NextPage = () => {
   return (
-    <main
-      className={`${inter.className}`}
-    >
-      <div>      
-          <NextLink href="/auth/login" passHref>
-            Inicia Sesión
-          </NextLink>
-      </div>
-    </main>
+    <Box display='flex' justifyContent='center' alignItems='center' sx={{backgroundColor: 'primary.main'}} height="calc(100vh)" >
+
+        <Button href="/auth/login">
+        Inicia Sesión
+        </Button>
+    </Box>
   );
-}
+};
+
+export default HomePage;
+
