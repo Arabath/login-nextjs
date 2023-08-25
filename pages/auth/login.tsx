@@ -1,8 +1,8 @@
 import NextLink from "next/link";
-import { Box, Button, Grid, Link, TextField, Typography } from "@mui/material";
+import { Box, Button, Grid, Link, TextField } from "@mui/material";
 //import { useForm } from 'react-hook-form';
 
-//import { AuthLayout } from '../../components/layouts'
+//import { AuthLayout } from '../../components/layouts/AuthLayout';
 
 // type FormData = {
 //     email: string,
@@ -15,9 +15,10 @@ const LoginPage = () => {
   // }
 
   return (
+    <Box display='flex' justifyContent='center' alignItems='center' height="calc(100vh - 200px)">
     <form>
-      <Grid item xs={12}>
-        <Box>
+      <Grid item xs={12} display='flex' justifyContent='center'>
+        <Box >
           Iniciar Sesión
         </Box>
       </Grid>
@@ -49,6 +50,7 @@ const LoginPage = () => {
               className="circular-btn"
               size="large"
               type="submit"
+              sx={{backgroundColor:"primary"}}
               fullWidth
             >
               Ingresar
@@ -63,19 +65,15 @@ const LoginPage = () => {
 
           <Grid item xs={12} display="flex" justifyContent="end">
             <NextLink href="/" passHref>
-              <Link underline="always">volver</Link>
+              volver
             </NextLink>
           </Grid>
         </Grid>
       </Box>
     </form>
-  );
-};
+    </Box>
+  )
+}
 
-export default LoginPage;
+export default LoginPage
 
-/*
-                <Grid item xs={12}>
-                    <Typography variant='h1' component="h1">Iniciar Sesión</Typography>
-                </Grid>
-                */
