@@ -1,6 +1,11 @@
 services:
-  teslodb:
-    image: mongo:5.0.0
+  nextlogindb:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+
     container_name: login-nextjs
     ports:
       - 27017:27017

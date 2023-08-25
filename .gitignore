@@ -19,6 +19,7 @@
 .DS_Store
 *.pem
 .env
+/mongo
 
 # debug
 npm-debug.log*
